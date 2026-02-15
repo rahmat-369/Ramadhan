@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/pages/index.html" },
+    { "source": "/history", "destination": "/pages/history.html" },
+    { "source": "/tools", "destination": "/pages/tools.html" },
+    { "source": "/profile", "destination": "/pages/profile.html" },
+    { "source": "/about", "destination": "/pages/about.html" },
+    { "source": "/sw.js", "destination": "/public/sw.js" },
+    { "source": "/manifest.json", "destination": "/public/manifest.json" },
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ]
+}
