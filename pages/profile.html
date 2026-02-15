@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Profil - Ramadhan Lantern</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-area"><svg class="logo-icon" viewBox="0 0 24 24"><path d="M12 2c0 0-4 2-4 6v10c0 2.2 1.8 4 4 4s4-1.8 4-4V8c0-4-4-6-4-6zm0 18c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2z"/></svg> Profil</div>
+        <div id="hamburger-btn" style="cursor:pointer"><svg width="28" height="28" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M4 6h16M4 12h16M4 18h16"/></svg></div>
+    </header>
+    
+    <div id="drawer-overlay" class="drawer-overlay"></div>
+    <div id="drawer" class="drawer">
+        <h3>Menu</h3>
+        <div class="drawer-item" onclick="window.location.href='/'">Dashboard</div>
+    </div>
+
+    <svg class="bg-lantern" viewBox="0 0 100 200" fill="var(--gold)">
+        <path d="M50 0v20M50 20c-15 0-25 10-25 25v40c0 15 10 25 25 25s25-10 25-25V45c0-15-10-25-25-25z" fill="var(--primary)" opacity="0.8"/>
+        <path d="M40 45h20v40h-20z" fill="#FFF" opacity="0.4"/>
+        <circle cx="50" cy="120" r="5" fill="var(--gold-glow)"/>
+    </svg>
+
+    <div class="container">
+        <div class="card" style="text-align:center;">
+            <img id="profile-avatar" src="" style="width:100px; height:100px; border-radius:50%; border:3px solid var(--gold); margin-bottom:10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <h2 id="profile-name">...</h2>
+            <p id="profile-bio" class="text-small">...</p>
+        </div>
+        
+        <div class="card">
+            <h3>Statistik Saya</h3>
+            <div class="toggle-row">
+                <span>Total Hari Log</span>
+                <b id="stat-log" class="text-gold">-</b>
+            </div>
+            <div class="stat-bar"><div class="stat-fill" style="width: 70%"></div></div>
+        </div>
+
+        <a href="https://whatsapp.com/channel/0029VbBjyjlJ93wa6hwSWa0p" target="_blank" class="btn btn-gold" style="display:block; text-decoration:none; text-align:center;">
+            Join Community Channel
+        </a>
+    </div>
+    
+    <div id="modal-quick-add" class="modal"><div class="modal-content"><button class="btn" onclick="this.parentElement.parentElement.classList.remove('active')">Tutup</button></div></div>
+
+    <nav class="bottom-nav">
+        <a href="/pages/index.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>Home</a>
+        <a href="/pages/history.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>Riwayat</a>
+        <div class="fab" id="fab-add"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></div>
+        <a href="/pages/tools.html" class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z"/></svg>Tools</a>
+        <a href="/pages/profile.html" class="nav-item active"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>Profil</a>
+    </nav>
+    <script src="/app.js"></script>
+</body>
+</html>
